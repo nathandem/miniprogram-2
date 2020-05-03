@@ -1,21 +1,92 @@
 /**index.wxss**/
-.userinfo {
+@import "./weui.wxss";
+
+.page-section {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+.swiper {
+  height: 500rpx;
+  width: 100%;
+  margin-top: 0%;
+  padding-top: 0px;
+}
+.swiper image {
+  height: 100%;
+  width: 100%;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.flex-wrp {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.flex-item {
+  width: 247rpx;
+  height: 80px;
+  background:#EDEDED;
+  border: 3rpx solid #fff;
+  text-align: center;
+  color:rgb(48, 29, 4);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: small;
+  white-space:pre-wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.usermotto {
-  margin-top: 200px;
+.placeholder{
+  margin:0px;
+  padding:0 10px;
+  text-align:center;
+  background-color:#fff;
+  height:2.3em;
+  line-height:2.3em;
+  color:var(--weui-FG-1)
+}
+
+.category-item {
+  width: 372rpx;
+  height: 60px;
+  background:#EDEDED;
+  border: 1rpx solid #fff;
+  text-align: center;
+  color:rgb(48, 29, 4);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: small;
+  white-space:pre-wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.goods-img.new:before{      /*新品标签样式*/
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  content: "新品";
+  color: #fff;
+  font-size: 9pt;
+  text-align: center;
+  background: #8CC64A;
+}
+.goods-img.on-sale:before{   /*立减标签样式*/
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  content: "立减";
+  font-size: 9pt;
+  color: #fff;
+  text-align: center;
+  background: #ec6055;
 }

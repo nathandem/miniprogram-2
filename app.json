@@ -2,7 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/items/items"
+    "pages/items/items",
+    "pages/cart/cart",
+    "pages/mine/mine"
   ],
 
   "tabBar": {
@@ -21,10 +23,16 @@
         "pagePath": "pages/items/items",
         "iconPath": "pages/image/icon_component_HL.png",
         "selectedIconPath": "pages/image/icon_component.png",
-        "text": "商城"
+        "text": "分类"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/cart/cart",
+        "iconPath": "pages/image/icon_API_HL.png",
+        "selectedIconPath": "pages/image/icon_API.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/mine/mine",
         "iconPath": "pages/image/icon_API_HL.png",
         "selectedIconPath": "pages/image/icon_API.png",
         "text": "我的"

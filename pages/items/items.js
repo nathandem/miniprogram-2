@@ -8,32 +8,45 @@ Page({
 
   },
 
+  // let's add a comment
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(Date.now())
+    console.log("Items page is loaded")
+    wx.showNavigationBarLoading()
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    console.log(Date.now())
+    console.log("Items page is ready")
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    console.log(Date.now())
+    console.log("Items page is shown")
+    wx.setNavigationBarTitle({
+      title: '新品',
+      success: function(res){
+        console.log(res)
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+    console.log(Date.now())
+    console.log("Items page is hidden")
   },
 
   /**

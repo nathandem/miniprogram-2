@@ -1,14 +1,69 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<view class="page">
+  <view class="page__bd">
+    <mp-searchbar bindselectresult="selectResult" search="{{search}}"></mp-searchbar>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+
+	<view class="page-section">
+    <swiper class="swiper" indicator-dots="true" autoplay="true" interval="1000" duration="200">  
+      <block wx:for="{{movies}}" wx:for-index="index">  
+        <swiper-item>  
+          <image src="{{item.url}}" class="slide-image" mode="aspectFill"/>  
+        </swiper-item>  
+      </block>  
+    </swiper>  
+	</view>
+
+	<view class="section">
+  	<view class="flex-wrp" style="flex-direction:row;">
+    	<view class="category-item bc_green">New On\n 最新上架</view>
+    	<view class="category-item bc_red">Editor's Choice\n 编辑精选</view>
+    	<view class="category-item bc_blue">Promotions\n 特惠产品</view>
+			<view class="category-item bc_green">Bestsellers\n 最热单品</view>
+  	</view>
+	</view>
+
+	<view class="section">
+			<view class="flex-wrp">
+				<view class="placeholder">- Category 商品种类 -</view>
+			</view>
+	</view>
+
+	<view class="section">
+  	<view class="flex-wrp" style="flex-direction:row;">
+    	<view class="flex-item bc_green" style="background-image:url(/pages/image/earings.png)">Earings\n 耳饰</view>
+    	<view class="flex-item bc_red" style="background-image:url(/pages/image/bracelets.jpg">Bracelet\n 手环</view>
+    	<view class="flex-item bc_blue" style="background-image:url(/pages/image/rings.jpg">Rings\n 戒指</view>
+			<view class="flex-item bc_green"style="background-image:url(/pages/image/necklaces.jpg">Nacklaces\n 项链</view>
+    	<view class="flex-item bc_red" style="background-image:url(/pages/image/accessories.jpg">Accessories\n 饰品</view>
+    	<view class="flex-item bc_blue" style="background-image:url(/pages/image/gifts.jpg">Gifts\n 送礼</view>
+  	</view>
+	</view>
+
+	<view class="section">
+			<view class="flex-wrp">
+				<view class="placeholder">- Pearls 珍珠系列 -</view>
+			</view>
+	</view>
+	
+    <view class="section block">
+        <block wx:for="{{index_block}}" wx:key="{{item.id}}">
+            <view class="section cover">
+                <image class="cover-img" src="{{item.img_url}}" data-cid="{{item.id}}" bindtap="showcDetail"/>
+            </view>
+            <view class="section goods-list">
+                <block wx:for="{{item.section}}" wx:key="index" wx:for-item="product">
+                    <view class="goods-item">
+                        <image class="goods-img {{product.is_new?'new':''}} {{product.on_sale?'on-sale':''}}" src="{{product.goods_cover}}" data-pid="{{product.id}}" mode="aspectFill" bindtap="showDetail"/>
+                        <text class="title">{{product.header}}</text>
+                        <text class="desp">{{product.description}}</text>
+                        <text class="meta">{{product.meta}}</text>
+                        <text class="discount">{{product.discount}}</text>
+                    </view>
+                </block>
+            </view>
+        </block>
+    </view>	
 </view>
+
 

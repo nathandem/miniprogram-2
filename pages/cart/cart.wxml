@@ -1,0 +1,4 @@
+<!--pages/newpage/newpage.wxml-->
+<view class="container">
+  <text>Welcome aboard</text>
+</view>

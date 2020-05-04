@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/items/items",
     "pages/cart/cart",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/goods/goods"
   ],
 
   "tabBar": {
@@ -15,26 +16,26 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "pages/image/icon_API_HL.png",
-        "selectedIconPath": "pages/image/icon_API.png",
+        "iconPath": "pages/image/home.png",
+        "selectedIconPath": "pages/image/home_active.png",
         "text": "首页"
       },
       {
         "pagePath": "pages/items/items",
-        "iconPath": "pages/image/icon_component_HL.png",
-        "selectedIconPath": "pages/image/icon_component.png",
+        "iconPath": "pages/image/category.png",
+        "selectedIconPath": "pages/image/category_active.png",
         "text": "分类"
       },
       {
         "pagePath": "pages/cart/cart",
-        "iconPath": "pages/image/icon_API_HL.png",
-        "selectedIconPath": "pages/image/icon_API.png",
+        "iconPath": "pages/image/cart.png",
+        "selectedIconPath": "pages/image/cart_active.png",
         "text": "购物车"
       },
       {
         "pagePath": "pages/mine/mine",
-        "iconPath": "pages/image/icon_API_HL.png",
-        "selectedIconPath": "pages/image/icon_API.png",
+        "iconPath": "pages/image/mine.png",
+        "selectedIconPath": "pages/image/mine_active.png",
         "text": "我的"
       }
     ]

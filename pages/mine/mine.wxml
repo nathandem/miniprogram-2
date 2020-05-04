@@ -1,2 +1,46 @@
 <!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view class="mine-container">
+    <view class="weui-cells">
+        <view class="weui-cell">
+            <view class="weui-cell__hd head">
+                <image src="/pages/image/watches.jpg"></image>
+            </view>
+            <view class="weui-cell__bd">
+                <view class="name">刘芷琳</view>
+                <view class="account" bindtap="bindAccount">
+                    绑定微信账号
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="weui-cells client-service">
+        <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="/pages/items/items">
+            <view class="weui-cell__hd">
+                <image src="/pages/image/order.png" />
+            </view>
+            <view class="weui-cell__bd">我的订单</view>
+        </navigator>
+        <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="/pages/goods/goods">
+            <view class="weui-cell__hd">
+                <image src="/pages/image/addr.png" />
+            </view>
+            <view class="weui-cell__bd">我的收货地址</view>
+        </navigator>
+        <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="/pages/items/items">
+            <view class="weui-cell__hd">
+                <image src="/pages/image/coupon.png" />
+            </view>
+            <view class="weui-cell__bd">我的优惠券</view>
+        </navigator>
+    </view>
+
+    <view class="weui-cells">
+        <navigator url="/pages/catalog/catalog" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+                <image src="/pages/image/setting.png" />
+            </view>
+            <view class="weui-cell__bd">设置</view>
+        </navigator>
+    </view>    
+</view>

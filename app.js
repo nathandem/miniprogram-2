@@ -1,4 +1,5 @@
-//app.js
+import fixture from './fixture.js';
+
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -35,7 +36,8 @@ App({
     })
   },
   onLaunch: function () {
-    console.log("App is shown");
+    console.log("App is launched");
+    this.globalData.fixtures = fixture;
   },
 
   globalData: {

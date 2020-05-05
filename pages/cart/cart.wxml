@@ -5,7 +5,24 @@
             <image src="../../assets/icons/cart_empty.png" mode="aspectFill" />
         </view>
         <view class="prompt">购物车还是空的</view>
-        <button type="warn" class="btn-warn" style="background: #EDEDED;" bindtap="goIndex">到小米商城逛逛</button>
+        <button type="warn" class="btn-warn" style="background: #EDEDED; color: #3E2A26;" bindtap="goIndex">去逛逛</button>
+    </view>
+
+    <view class="other-goods"> 
+        <view class="flex-wrp">
+			<view class="placeholder">- 更多精选商品 -</view>
+		</view>
+        <view class="section goods-list">
+				<block wx:for="{{item.section}}" wx:key="index" wx:for-item="product">
+					<view class="goods-item">
+						<image class="goods-img {{product.is_new?'new':''}} {{product.on_sale?'on-sale':''}}" src="{{product.goods_cover}}" data-pid="{{product.id}}" mode="aspectFill" bindtap="showDetail"/>
+						<text class="title">{{product.header}}</text> 
+						<text class="desp">{{product.description}}</text>
+						<text class="meta">{{product.meta}}</text>
+						<text class="discount">{{product.discount}}</text>
+					</view>
+				</block>
+		</view>
     </view>
 </view>
 <view wx:else>

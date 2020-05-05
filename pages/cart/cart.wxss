@@ -25,6 +25,15 @@
 .btn-warn{
   width: 580rpx;
   letter-spacing: 4rpx;
+  color: black;
+}
+
+.flex-wrp {
+  margin-top: 60rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 /*购物车结算操作*/
